@@ -13,4 +13,5 @@ This is a repository for development for an augmentet reality client for [Approx
 
 ## Contributors
 - Erik Hedlund, **@Gamma_Epsilon**
+- Tobias Vinsa, **@ObsessivePerfectionist**
 - More profiles..., **@GitHub_Name**
