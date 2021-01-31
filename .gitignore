@@ -11,6 +11,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/[Uu]ser[Ss]ettings/
 # Can't be bothered to do this the correct way
 # /src/[Ll]ibrary/ 
 /src/[Tt]emp/
@@ -19,6 +20,7 @@
 /src/[Bb]uilds/
 /src/[Ll]ogs/
 /src/[Mm]emoryCaptures/
+/src/[Uu]ser[Ss]ettings/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
