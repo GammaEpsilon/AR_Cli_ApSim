@@ -4,7 +4,7 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-# /[Ll]ibrary/
+/[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
@@ -13,7 +13,7 @@
 /[Mm]emoryCaptures/
 /[Uu]ser[Ss]ettings/
 # Can't be bothered to do this the correct way
-# /src/[Ll]ibrary/ 
+/src/[Ll]ibrary/ 
 /src/[Tt]emp/
 /src/[Oo]bj/
 /src/[Bb]uild/
