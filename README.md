@@ -16,6 +16,10 @@ This is a repository for development for an augmentet reality client for [Approx
 
 Do __not__ add the temp folder that Unity creates while running. Even if Unity and Git allows you to do this, it is a still a bad idea and you should feel bad for doing it.
 
+## Unity Version
+
+2020.2.2f1
+
 ## Contributors
 - Erik Hedlund, **@Gamma_Epsilon**
 - Tobias Vinsa, **@ObsessivePerfectionist**
