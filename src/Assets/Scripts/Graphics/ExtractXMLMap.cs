@@ -3,13 +3,16 @@ using System.Xml;
 using System.Collections;
 using System.Linq;
 using UnityEngine;
-public static class ExtractXML    
+using UnityEngine.Networking;
+public static class ExtractXMLMap  
 {
-    public static double[][][] getShapes(string path) {
+    public static double[][][] getShapes(string fileName) {
         XmlDocument doc = new XmlDocument();
         doc.PreserveWhitespace = true;
         try{
-            doc.Load(path);
+            //doc.Load("Assets/Scenarios/"+fileName);
+            TextAsset textXml = (TextAsset)Resources.Load(fileName, typeof(TextAsset));
+            doc.LoadXml(textXml.text);
             Debug.Log("Map loaded");
         }
         catch (System.IO.FileNotFoundException e){

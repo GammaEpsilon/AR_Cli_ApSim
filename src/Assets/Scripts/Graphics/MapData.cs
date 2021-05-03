@@ -7,7 +7,7 @@ public static class MapData {
     public static float scaling;
     public static Vector2 center; //in long and la
 
-    public static Vector3 convert(Vector2 coord) {
+    public static Vector3 convert(Vector2 coord) { //coord is (long, lat)
         //Formula: https://mathworld.wolfram.com/LambertAzimuthalEqual-AreaProjection.html
         float phi = Mathf.Deg2Rad*coord.x;
         float lambda = Mathf.Deg2Rad*coord.y;

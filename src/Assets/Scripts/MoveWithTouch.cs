@@ -16,12 +16,11 @@ public class MoveWithTouch : MonoBehaviour
     {
         Touch t = Input.GetTouch(0);
         if(Input.touchCount == 1 && t.phase == TouchPhase.Moved) {
-
             Vector2 diff = t.deltaPosition;
-
+            //Transform camT = Camera.current.transform;
             transform.position += new Vector3(diff.x,0,diff.y)*moveSpeed;
-
-
+            //transform.position += diff.x*transform.right*moveSpeed;
+            //transform.position += diff.y*transform.forward*moveSpeed;
         }
     }
 }

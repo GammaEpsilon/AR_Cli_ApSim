@@ -15,6 +15,7 @@ public class ARCast : MonoBehaviour
     private ARRaycastManager aRRaycastManager;
     private bool placementPoseIsValid = false;
 
+
     void Start()
     {
         //arOrigin = FindObjectOfType<ARSessionOrigin>();
@@ -52,8 +53,8 @@ public class ARCast : MonoBehaviour
 
     private void UpdatePlacementPose()
 	{
-        var screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
-        var hits = new List<ARRaycastHit>();
+        Vector3 screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
+        List<ARRaycastHit> hits = new List<ARRaycastHit>();
         aRRaycastManager.Raycast(screenCenter, hits, TrackableType.All);
 
         placementPoseIsValid = hits.Count > 0;
