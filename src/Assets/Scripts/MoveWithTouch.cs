@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveWithTouch : MonoBehaviour
 {
     // Start is called before the first frame update
-    float moveSpeed = 0.001f;
+    private float moveSpeed = 0.001f;
     void Start()
     {
         
@@ -17,10 +17,11 @@ public class MoveWithTouch : MonoBehaviour
         Touch t = Input.GetTouch(0);
         if(Input.touchCount == 1 && t.phase == TouchPhase.Moved) {
             Vector2 diff = t.deltaPosition;
-            //Transform camT = Camera.current.transform;
-            transform.position += new Vector3(diff.x,0,diff.y)*moveSpeed;
-            //transform.position += diff.x*transform.right*moveSpeed;
-            //transform.position += diff.y*transform.forward*moveSpeed;
+            Transform camT = Camera.current.transform;
+            //transform.position += new Vector3(diff.x,0,diff.y)*moveSpeed;
+            Vector3 movement = (diff.x * camT.right + diff.y * camT.forward) * moveSpeed;
+            transform.position += Vector3.ProjectOnPlane(movement,new Vector3(0,1,0));
+
         }
     }
 }

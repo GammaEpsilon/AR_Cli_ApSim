@@ -15,15 +15,18 @@ public class DrawMap : MonoBehaviour
         int numShapes = shapes.Length;
         Polygon[] polygonList = new Polygon[numShapes];
 
+        Debug.Log("Number of shapes: " + numShapes);
+
         for (int i = 0; i < numShapes; i++) {
             double[][] coords = shapes[i];
-            int numPoints = coords.GetLength(0);
+            int numPoints = coords.Length;
             Vector2[] pointList = new Vector2[numPoints];
             for (int j = 0; j < numPoints; j++) {
                 pointList[j] = new Vector2((float) coords[j][0],(float) coords[j][1]);
             }
             polygonList[i] = new Polygon(pointList,i.ToString());
         }
+
 
         float minLong = Mathf.Infinity;
         float maxLong = -minLong;
@@ -69,7 +72,7 @@ public class DrawMap : MonoBehaviour
 
         Vector2 center = new Vector2((maxLong+minLong)/2,(maxLat+minLat)/2);
         Vector2 scalingCoords = Coordinate.convert(new Vector2(maxLong,maxLat), center) - Coordinate.convert(new Vector2(minLong,minLat), center);
-        float scaling = 1f/Mathf.Max(scalingCoords.x,scalingCoords.y);
+        float scaling = 1f/Mathf.Max(scalingCoords.x,scalingCoords.y) * 0.95f;
 
         MapData.scaling = scaling;
         MapData.center = center;
@@ -87,7 +90,7 @@ public class DrawMap : MonoBehaviour
             lr.loop = true;
             lr.transform.localEulerAngles = Vector3.zero;
             lr.useWorldSpace = false;
-            lr.widthMultiplier = 0.075f;
+            lr.widthMultiplier = 0.05f;
             lr.transform.SetPositionAndRotation(transform.position,transform.rotation);
             g.transform.localScale = Vector3.one / 10f;
             p.draw(lr);

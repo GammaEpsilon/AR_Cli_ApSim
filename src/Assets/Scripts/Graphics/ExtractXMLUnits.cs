@@ -18,7 +18,8 @@ public class ExtractXMLUnits {
         }
         
         XmlNode root = doc.DocumentElement;
-        XmlNodeList units = root.SelectNodes("//root/identifiables/scenario/militaryUnits");
+        //XmlNodeList units = root.SelectNodes("//root/identifiables/scenario/militaryUnits");
+        XmlNodeList units = root.SelectNodes("descendant::militaryUnits");
         //int counter = 1;
         int count = units.Count;
         MilitaryUnit[] unitsList = new MilitaryUnit[count];

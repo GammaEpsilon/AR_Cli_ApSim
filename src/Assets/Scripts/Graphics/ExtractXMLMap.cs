@@ -22,7 +22,8 @@ public static class ExtractXMLMap
         
         XmlNode root = doc.DocumentElement;
 
-        XmlNodeList polygons = root.SelectNodes("//root/identifiables/scenario/map/shapes");
+        //XmlNodeList polygons = root.SelectNodes("//root/identifiables/scenario/map/shapes");
+        XmlNodeList polygons = root.SelectNodes("descendant::shapes");
 
         double[][][] map = new double[polygons.Count][][];
         int l = 0;

@@ -14,6 +14,7 @@ public class ARCast : MonoBehaviour
     private Pose placementPose;
     private ARRaycastManager aRRaycastManager;
     private bool placementPoseIsValid = false;
+    private bool placed = false;
 
 
     void Start()
@@ -25,14 +26,18 @@ public class ARCast : MonoBehaviour
 
     void Update()
     {
-        UpdatePlacementPose();
-        UpdatePlacementIndicator();
-
-        //Place on click
-        if(placementPoseIsValid && Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began) {
-            PlaceObject();
+        if (!placed) {
+            UpdatePlacementPose();
+            UpdatePlacementIndicator();
+                    //Place on click
+            if(placementPoseIsValid && Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began) {
+                PlaceObject();
+                placed = true;
+                placementIndicator.SetActive(false);
+            }
         }
     }
+
 
     private void PlaceObject() {
         objectToPlace.SetActive(true);

@@ -161,7 +161,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35772911}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b0e4dd0e5246d94c822b940b461b2ef, type: 3}
   m_Name: 
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40919614}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 321d46d40ce884040a83023ffe5a820b, type: 3}
   m_Name: 
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40919614}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b3d971c21b13ed45a55b7dfb37f2aa5, type: 3}
   m_Name: 
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40919614}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65fb6323de9ef6340b56bdcb2a3b374e, type: 3}
   m_Name: 
@@ -249,6 +249,7 @@ GameObject:
   - component: {fileID: 48254275}
   - component: {fileID: 48254274}
   - component: {fileID: 48254273}
+  - component: {fileID: 48254276}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -297,6 +298,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &48254276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48254272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlanePrefab: {fileID: 0}
+  m_DetectionMode: -1
 --- !u!1 &157630898
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e77661da1aa5ab41a93d238a90ae0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenarioFileName: kth
+  scenarioFileName: boogaunitscn
 --- !u!1 &690976003
 GameObject:
   m_ObjectHideFlags: 0
