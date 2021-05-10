@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root xmlns:sp="http://pdc.kth.se/approxsimNamespace" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sp:Root">
+	<identifiables identifier="KTH" xsi:type="sp:CommonSimulation">
+		<timeStepper xsi:type="sp:ConstantStepper">
+			<dt xsi:type="sp:Duration">
+				<value>86400000</value>
+			</dt>
+		</timeStepper>
+		<gridPartitioner xsi:type="sp:SquarePartitioner">
+			<cellSizeMeters xsi:type="sp:Double">
+				<value>10.0</value>
+			</cellSizeMeters>
+		</gridPartitioner>
+		<scenario xsi:type="sp:CommonScenario">
+			<map xsi:type="sp:Composite">
+				<shapes identifier="1" xsi:type="sp:Polygon">
+					<curves identifier="1" xsi:type="sp:Line">
+						<p1 xsi:type="sp:Point">
+							<lat>59.1</lat>
+							<lon>18.1</lon>
+						</p1>
+						<p2 xsi:type="sp:Point">
+							<lat>59.34658951418979</lat>
+							<lon>18.07144302845814</lon>
+						</p2>
+					</curves>
+					<curves identifier="2" xsi:type="sp:Line">
+						<p1 xsi:type="sp:Point">
+							<lat>59.2</lat>
+							<lon>18.2</lon>
+						</p1>
+						<p2 xsi:type="sp:Point">
+							<lat>59.34713990335646</lat>
+							<lon>18.07000839312615</lon>
+						</p2>
+					</curves>
+					<curves identifier="3" xsi:type="sp:Line">
+						<p1 xsi:type="sp:Point">
+							<lat>59.3</lat>
+							<lon>18.3</lon>
+						</p1>
+						<p2 xsi:type="sp:Point">
+							<lat>59.34795025719246</lat>
+							<lon>18.06862949973086</lon>
+						</p2>
+					</curves>
+				</shapes>
+				<shapes identifier="2" xsi:type="sp:Polygon">
+					<curves identifier="1" xsi:type="sp:Line">
+						<p1 xsi:type="sp:Point">
+							<lat>59.4</lat>
+							<lon>18.4</lon>
+						</p1>
+						<p2 xsi:type="sp:Point">
+							<lat>59.35320280072066</lat>
+							<lon>18.06409761959976</lon>
+						</p2>
+					</curves>
+					<curves identifier="2" xsi:type="sp:Line">
+						<p1 xsi:type="sp:Point">
+							<lat>59.5</lat>
+							<lon>18.5</lon>
+						</p1>
+						<p2 xsi:type="sp:Point">
+							<lat>59.35340966378224</lat>
+							<lon>18.06317332078048</lon>
+						</p2>
+					</curves>
+					<curves identifier="3" xsi:type="sp:Line">
+						<p1 xsi:type="sp:Point">
+							<lat>59.6</lat>
+							<lon>18.6</lon>
+						</p1>
+						<p2 xsi:type="sp:Point">
+							<lat>59.35425247999735</lat>
+							<lon>18.06347176790625</lon>
+						</p2>
+					</curves>
+				</shapes>
+			</map>
+			<disease xsi:type="sp:Disease">
+				<description xsi:type="sp:String">
+					<value>None</value>
+				</description>
+				<infectionRate xsi:type="sp:Double">
+					<value>0.0</value>
+				</infectionRate>
+				<recoveryRate xsi:type="sp:Double">
+					<value>0.0</value>
+				</recoveryRate>
+				<mortalityRate xsi:type="sp:Double">
+					<value>0.0</value>
+				</mortalityRate>
+			</disease>
+			<militaryUnits identifier="Osquarulda" xsi:type="sp:MilitaryUnit">
+				<present xsi:type="sp:Boolean">
+					<value>true</value>
+				</present>
+				<activities identifier="Till Maskin" xsi:type="sp:GoToOrder">
+					<active xsi:type="sp:Boolean">
+						<value>false</value>
+					</active>
+					<start xsi:type="sp:Timestamp">
+						<value>2014-04-28T00:00:00.000Z</value>
+					</start>
+					<carriedOut xsi:type="sp:Boolean">
+						<value>false</value>
+					</carriedOut>
+					<location xsi:type="sp:Circle">
+						<radius xsi:type="sp:Double">
+							<value>10.0</value>
+						</radius>
+						<center xsi:type="sp:Point">
+							<lat>59.354092572129645</lat>
+							<lon>18.063792418955227</lon>
+						</center>
+					</location>
+				</activities>
+				<location xsi:type="sp:Circle">
+					<radius xsi:type="sp:Double">
+						<value>10.0</value>
+					</radius>
+					<center xsi:type="sp:Point">
+						<lat>59.34621106978294</lat>
+						<lon>18.07334813644805</lon>
+					</center>
+				</location>
+				<deployment xsi:type="sp:UniformDistribution"/>
+				<symbolIDCode xsi:type="sp:SymbolIDCode">
+					<value>
+						<value>---------------</value>
+					</value>
+				</symbolIDCode>
+				<affiliation xsi:type="sp:FactionReference">
+					<name>Datasektionen</name>
+					<scope>
+						<name>factions</name>
+						<scope>
+							<name>scenario</name>
+							<scope>
+								<name>KTH</name>
+								<scope>
+									<name>identifiables</name>
+								</scope>
+							</scope>
+						</scope>
+					</scope>
+				</affiliation>
+				<personnel xsi:type="sp:NonNegativeInteger">
+					<value>10</value>
+				</personnel>
+				<casualties xsi:type="sp:NonNegativeInteger">
+					<value>0</value>
+				</casualties>
+				<strengthFactor xsi:type="sp:Double">
+					<value>0.2</value>
+				</strengthFactor>
+				<attackFactor xsi:type="sp:Double">
+					<value>1.0</value>
+				</attackFactor>
+				<defenseFactor xsi:type="sp:Double">
+					<value>1.0</value>
+				</defenseFactor>
+				<maxVelocity xsi:type="sp:Double">
+					<value>1.0E-4</value>
+				</maxVelocity>
+				<deployTime xsi:type="sp:Timestamp">
+					<value>2014-01-01T00:00:00.000Z</value>
+				</deployTime>
+				<departTime xsi:type="sp:Timestamp">
+					<value>2020-04-28T00:00:00.000Z</value>
+				</departTime>
+				<WithdrawThreshold xsi:type="sp:Double">
+					<value>75.0</value>
+				</WithdrawThreshold>
+			</militaryUnits>
+			<factions identifier="Datasektionen" xsi:type="sp:MilitaryFaction"/>
+			<HDI xsi:type="sp:Double">
+				<value>0.0</value>
+			</HDI>
+			<unemployment xsi:type="sp:Double">
+				<value>0.0</value>
+			</unemployment>
+			<path xsi:type="sp:PathGraph">
+				<nodes identifier="1" xsi:type="sp:PathNode">
+					<point xsi:type="sp:Point">
+						<lat>59.34665962558485</lat>
+						<lon>18.072617685972713</lon>
+					</point>
+				</nodes>
+				<nodes identifier="2" xsi:type="sp:PathNode">
+					<point xsi:type="sp:Point">
+						<lat>59.349109805864074</lat>
+						<lon>18.073033391781163</lon>
+					</point>
+				</nodes>
+				<nodes identifier="3" xsi:type="sp:PathNode">
+					<point xsi:type="sp:Point">
+						<lat>59.345773985356836</lat>
+						<lon>18.07237875279599</lon>
+					</point>
+				</nodes>
+				<nodes identifier="4" xsi:type="sp:PathNode">
+					<point xsi:type="sp:Point">
+						<lat>59.34956474463526</lat>
+						<lon>18.06857200676681</lon>
+					</point>
+				</nodes>
+				<nodes identifier="5" xsi:type="sp:PathNode">
+					<point xsi:type="sp:Point">
+						<lat>59.35218791700876</lat>
+						<lon>18.06759036006188</lon>
+					</point>
+				</nodes>
+				<nodes identifier="6" xsi:type="sp:PathNode">
+					<point xsi:type="sp:Point">
+						<lat>59.351823927390335</lat>
+						<lon>18.064407675987304</lon>
+					</point>
+				</nodes>
+				<edges identifier="Drottningkristinas v??g" xsi:type="sp:PathEdge">
+					<origin xsi:type="sp:NodeReference">
+						<name>4</name>
+						<scope>
+							<name>nodes</name>
+							<scope>
+								<name>path</name>
+								<scope>
+									<name>scenario</name>
+									<scope>
+										<name>KTH</name>
+										<scope>
+											<name>identifiables</name>
+										</scope>
+									</scope>
+								</scope>
+							</scope>
+						</scope>
+					</origin>
+					<target xsi:type="sp:NodeReference">
+						<name>1</name>
+						<scope>
+							<name>nodes</name>
+							<scope>
+								<name>path</name>
+								<scope>
+									<name>scenario</name>
+									<scope>
+										<name>KTH</name>
+										<scope>
+											<name>identifiables</name>
+										</scope>
+									</scope>
+								</scope>
+							</scope>
+						</scope>
+					</target>
+					<isConnected xsi:type="sp:Boolean">
+						<value>true</value>
+					</isConnected>
+					<travelSpeed xsi:type="sp:Double">
+						<value>2.0</value>
+					</travelSpeed>
+				</edges>
+				<edges identifier="Osquars backe" xsi:type="sp:PathEdge">
+					<origin xsi:type="sp:NodeReference">
+						<name>1</name>
+						<scope>
+							<name>nodes</name>
+							<scope>
+								<name>path</name>
+								<scope>
+									<name>scenario</name>
+									<scope>
+										<name>KTH</name>
+										<scope>
+											<name>identifiables</name>
+										</scope>
+									</scope>
+								</scope>
+							</scope>
+						</scope>
+					</origin>
+					<target xsi:type="sp:NodeReference">
+						<name>2</name>
+						<scope>
+							<name>nodes</name>
+							<scope>
+								<name>path</name>
+								<scope>
+									<name>scenario</name>
+									<scope>
+										<name>KTH</name>
+										<scope>
+											<name>identifiables</name>
+										</scope>
+									</scope>
+								</scope>
+							</scope>
+						</scope>
+					</target>
+					<isConnected xsi:type="sp:Boolean">
+						<value>true</value>
+					</isConnected>
+					<travelSpeed xsi:type="sp:Double">
+						<value>2.0</value>
+					</travelSpeed>
+				</edges>
+				<edges identifier="Stockholm ??stra" xsi:type="sp:PathEdge">
+					<origin xsi:type="sp:NodeReference">
+						<name>1</name>
+						<scope>
+							<name>nodes</name>
+							<scope>
+								<name>path</name>
+								<scope>
+									<name>scenario</name>
+									<scope>
+										<name>KTH</name>
+										<scope>
+											<name>identifiables</name>
+										</scope>
+									</scope>
+								</scope>
+							</scope>
+						</scope>
+					</origin>
+					<target xsi:type="sp:NodeReference">
+						<name>3</name>
+						<scope>
+							<name>nodes</name>
+							<scope>
+								<name>path</name>
+								<scope>
+									<name>scenario</name>
+									<scope>
+										<name>KTH</name>
+										<scope>
+											<name>identifiables</name>
+										</scope>
+									</scope>
+								</scope>
+							</scope>
+						</scope>
+					</target>
+					<isConnected xsi:type="sp:Boolean">
+						<value>true</value>
+					</isConnected>
+					<travelSpeed xsi:type="sp:Double">
+						<value>2.0</value>
+					</travelSpeed>
+				</edges>
+				<edges identifier="Brinellv??gen" xsi:type="sp:PathEdge">
+					<origin xsi:type="sp:NodeReference">
+						<name>4</name>
+						<scope>
+							<name>nodes</name>
+							<scope>
+								<name>path</name>
+								<scope>
+									<name>scenario</name>
+									<scope>
+										<name>KTH</name>
+										<scope>
+											<name>identifiables</name>
+										</scope>
+									</scope>
+								</scope>
+							</scope>
+						</scope>
+					</origin>
+					<target xsi:type="sp:NodeReference">
+						<name>5</name>
+						<scope>
+							<name>nodes</name>
+							<scope>
+								<name>path</name>
+								<scope>
+									<name>scenario</name>
+									<scope>
+										<name>KTH</name>
+										<scope>
+											<name>identifiables</name>
+										</scope>
+									</scope>
+								</scope>
+							</scope>
+						</scope>
+					</target>
+					<isConnected xsi:type="sp:Boolean">
+						<value>true</value>
+					</isConnected>
+					<travelSpeed xsi:type="sp:Double">
+						<value>2.0</value>
+					</travelSpeed>
+				</edges>
+				<edges identifier="Drottningkristinas v??g fort" xsi:type="sp:PathEdge">
+					<origin xsi:type="sp:NodeReference">
+						<name>4</name>
+						<scope>
+							<name>nodes</name>
+							<scope>
+								<name>path</name>
+								<scope>
+									<name>scenario</name>
+									<scope>
+										<name>KTH</name>
+										<scope>
+											<name>identifiables</name>
+										</scope>
+									</scope>
+								</scope>
+							</scope>
+						</scope>
+					</origin>
+					<target xsi:type="sp:NodeReference">
+						<name>6</name>
+						<scope>
+							<name>nodes</name>
+							<scope>
+								<name>path</name>
+								<scope>
+									<name>scenario</name>
+									<scope>
+										<name>KTH</name>
+										<scope>
+											<name>identifiables</name>
+										</scope>
+									</scope>
+								</scope>
+							</scope>
+						</scope>
+					</target>
+					<isConnected xsi:type="sp:Boolean">
+						<value>true</value>
+					</isConnected>
+					<travelSpeed xsi:type="sp:Double">
+						<value>2.0</value>
+					</travelSpeed>
+				</edges>
+			</path>
+		</scenario>
+		<startTime xsi:type="sp:Timestamp">
+			<value>2014-04-28T00:00:00.000Z</value>
+		</startTime>
+		<randomSeed xsi:type="sp:NonNegativeInteger">
+			<value>1399544222</value>
+		</randomSeed>
+		<modelParameters xsi:type="sp:ModelParameters">
+			<fractionPotentialInsurgents xsi:type="sp:Double">
+				<value>0.03</value>
+			</fractionPotentialInsurgents>
+			<insurgentDisaffectionThreshold xsi:type="sp:Double">
+				<value>30.0</value>
+			</insurgentDisaffectionThreshold>
+			<insurgentGenerationCoefficient xsi:type="sp:Double">
+				<value>0.01</value>
+			</insurgentGenerationCoefficient>
+			<insurgentStrengthFactor xsi:type="sp:Double">
+				<value>0.0375</value>
+			</insurgentStrengthFactor>
+		</modelParameters>
+	</identifiables>
+</root>
