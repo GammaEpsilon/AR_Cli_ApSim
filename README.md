@@ -25,4 +25,5 @@ Do __not__ add the temp folder that Unity creates while running. Even if Unity a
 - Tobias Vinsa, **@ObsessivePerfectionist**
 - Jonathan Erikson, **@jerikso**
 - Arvid Eriksson, **@ArvidEriksson**
+- Louise Tidestav, **@lollanlollan**
 - More profiles..., **@GitHub_Name**
